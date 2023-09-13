@@ -1,0 +1,18 @@
+{
+	"name": "esteb/template",
+	"type": "project",
+	"autoload": {
+		"psr-4": {
+			"MVC\\" : "./",
+			"Controllers\\" : "./controllers",
+			"Model\\" : "./models",
+			"Classes\\" : "./classes"
+		}
+	},
+	"authors": [
+		{
+			"name": "EsTeBaN22001",
+			"email": "esteban1.redon2@gmail.com"
+		}
+	]
+}

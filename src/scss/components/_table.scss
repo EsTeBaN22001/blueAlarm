@@ -1,31 +1,91 @@
 @use "base/variables" as v;
+@use "base/mixins" as m;
+
+.table-container {
+  // width: 60%;
+  max-width: 1100px;
+  margin: 0 auto;
+
+  @include m.tablet {
+    width: 100%;
+  }
+}
 
 .content-table {
   border-collapse: collapse;
-  margin: 25px 0;
+  margin: 25px auto;
   font-size: 0.9em;
   min-width: 400px;
   border-radius: 5px 5px 0 0;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+  thead {
+    tr {
+      background-color: v.$blue;
+      color: #ffffff;
+      text-align: left;
+      font-weight: bold;
+    }
+  }
+
+  th,
+  td {
+    padding: 12px 15px;
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid #dddddd;
+
+      &:nth-of-type(even) {
+        background-color: v.$white;
+      }
+    }
+  }
+
+  .actions-buttons-container {
+    display: flex;
+    // justify-content: space-between;
+    column-gap: 1rem;
+    align-items: center;
+
+    .actions-button {
+      padding: 1rem;
+      color: v.$white;
+      border-radius: 1rem;
+
+      &.edit-button {
+        background-color: v.$blue;
+      }
+
+      &.delete-button {
+        background-color: v.$red;
+      }
+    }
+  }
 }
 
-.content-table thead tr {
-  background-color: v.$blue;
-  color: #ffffff;
-  text-align: left;
-  font-weight: bold;
-}
+@include m.tablet {
+  .content-table {
+    tr {
+      display: flex;
+      flex-direction: column;
+      text-align: start;
+    }
 
-.content-table th,
-.content-table td {
-  padding: 12px 15px;
-}
+    td[data-title] {
+      display: flex;
 
-.content-table tbody tr {
-  border-bottom: 1px solid #dddddd;
-}
+      &::before {
+        width: 40%;
+        content: attr(data-title);
+        font-weight: bold;
+      }
+    }
 
-.content-table tbody tr:nth-of-type(even) {
-  background-color: v.$white;
+    thead {
+      display: none;
+    }
+  }
 }

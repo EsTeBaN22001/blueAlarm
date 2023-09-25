@@ -4,31 +4,34 @@
   <table class="content-table">
     <thead>
       <tr>
-        <th>Rank</th>
-        <th>Name</th>
-        <th>Points</th>
-        <th>Team</th>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Email</th>
+        <th>Administrador</th>
+        <th>Acciones</th>
       </tr>
     </thead>
     <tbody>
+      <?php foreach($users as $user): ?>
       <tr>
-        <td>1</td>
-        <td>Domenic</td>
-        <td>88,110</td>
-        <td>dcode</td>
+        <td data-title="Id"><?= $user->id ?></td>
+        <td data-title="Nombre"><?= $user->name ?></td>
+        <td data-title="Apellido"><?= $user->surname ?></td>
+        <td data-title="Email"><?= $user->email ?></td>
+        <td data-title="Administrador"><?= $user->admin ?></td>
+        <td data-title="Acciones" class="actions-buttons-container">
+          <a href="<?= $_SERVER['HOST']  ?>/dashboard/users/edit?id=<?= $user->id ?>"
+            class="actions-button edit-button">
+            <i class="fa-solid fa-pencil"></i>
+          </a>
+          <a href="$_SERVER['HOST']  ?>/dashboard/users/delete?id=<?= $user->id ?>"
+            class="actions-button delete-button">
+            <i class="fa-solid fa-trash"></i>
+          </a>
+        </td>
       </tr>
-      <tr>
-        <td>2</td>
-        <td>Sally</td>
-        <td>72,400</td>
-        <td>Students</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Nick</td>
-        <td>52,300</td>
-        <td>dcode</td>
-      </tr>
+      <?php endforeach ?>
     </tbody>
   </table>
 </div>

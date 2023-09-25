@@ -5,7 +5,7 @@ namespace Controllers;
 use Models\Users;
 use MVC\Router;
 
-class IndexController{
+class LoginController{
 
   public static function login(Router $router){
     
@@ -44,7 +44,7 @@ class IndexController{
 
     $alerts = Users::getAlerts();
     
-    $router->render('login', [
+    $router->renderLogin('login', [
       'title' => 'Inicio de sesión',
       'alerts' => $alerts
     ]);

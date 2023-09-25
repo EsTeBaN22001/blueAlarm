@@ -1,0 +1,104 @@
+@use "users";
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.cpanel-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @include m.tablet {
+    flex-direction: column;
+    row-gap: 4rem;
+
+    .cpanel {
+      width: 100%;
+    }
+  }
+}
+
+.cpanel {
+  width: 32%;
+  // display: inline-block;
+
+  background-color: v.$darkGray;
+  color: v.$white;
+  min-height: 20rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.icon-part {
+  flex: 3;
+}
+.card-content-part {
+  flex: 1;
+}
+
+.icon-part i {
+  font-size: 30px;
+  padding: 10px;
+  border: 1px solid v.$white;
+  border-radius: 50%;
+  margin-top: -25px;
+  margin-bottom: 10px;
+  background-color: v.$darkGray;
+}
+.icon-part p {
+  margin: 0px;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+.card-content-part {
+  background-color: v.$darkBlue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cpanel .card-content-part:hover {
+  background-color: v.$titleColor;
+  cursor: pointer;
+}
+.card-content-part a {
+  color: v.$white;
+  text-decoration: none;
+  padding: 10px 0;
+  width: 100%;
+  height: 100%;
+}
+.cpanel-green .icon-part,
+.cpanel-green .icon-part i {
+  background-color: v.$waterGreen;
+}
+.cpanel-green .card-content-part {
+  background-color: darken(v.$waterGreen, 10%);
+}
+.cpanel-orange .icon-part,
+.cpanel-orange .icon-part i {
+  background-color: v.$yellow;
+}
+.cpanel-orange .card-content-part {
+  background-color: darken(v.$yellow, 10%);
+}
+.cpanel-blue .icon-part,
+.cpanel-blue .icon-part i {
+  background-color: v.$blue;
+}
+.cpanel-blue .card-content-part {
+  background-color: darken(v.$blue, 10%);
+}
+.cpanel-red .icon-part,
+.cpanel-red .icon-part i {
+  background-color: v.$red;
+}
+.cpanel-red .card-content-part {
+  background-color: darken(v.$red, 10%);
+}
+.cpanel-skyblue .icon-part,
+.cpanel-skyblue .icon-part i {
+  background-color: v.$purple;
+}
+.cpanel-skyblue .card-content-part {
+  background-color: darken(v.$purple, 10%);
+}

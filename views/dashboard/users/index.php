@@ -1,5 +1,13 @@
 <h1>Usuarios</h1>
 
+<div class="container-sm section-sm">
+  <?php if (isset($_GET['at']) && isset($_GET['am']) ): ?>
+  <div class="alert <?= $_GET['at'] ?>">
+    <?= $_GET['am'] ?>
+  </div>
+  <?php endif?>
+</div>
+
 <div class="table-container">
   <table class="content-table">
     <thead>

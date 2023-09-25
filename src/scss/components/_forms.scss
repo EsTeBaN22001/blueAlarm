@@ -1,0 +1,48 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.form {
+  background-color: v.$white;
+  padding: 5rem;
+  border-radius: 2rem;
+  width: fit-content;
+
+  h1,
+  h2,
+  h3 {
+    color: v.$principalColor;
+  }
+
+  .field-group {
+    margin: 3rem 0;
+    text-align: start;
+
+    label,
+    input {
+      display: block;
+      width: 100%;
+      color: v.$gray;
+      transition: color 0.3s ease;
+    }
+
+    label {
+      margin-bottom: 1rem;
+    }
+
+    input {
+      border: none;
+      outline: none;
+      padding: 1.5rem;
+      background-color: v.$lightGray;
+      border-radius: 0.5rem;
+
+      &:focus {
+        color: v.$darkGray;
+      }
+    }
+
+    .submit-button {
+      @include m.button(v.$blue, v.$white);
+    }
+  }
+}

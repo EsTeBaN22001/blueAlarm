@@ -19,5 +19,8 @@ $router->get('/dashboard', [DashboardController::class, 'index']);
 // Usuarios
 $router->get('/dashboard/users', [UsersController::class, 'index']);
 
+$router->get('/dashboard/users/edit', [UsersController::class, 'edit']);
+$router->post('/dashboard/users/edit', [UsersController::class, 'edit']);
+
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
 $router->checkRoutes();

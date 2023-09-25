@@ -1,4 +1,5 @@
 @use 'variables' as v;
+@use 'mixins' as m;
 
 html {
 	font-size: 62.5%;
@@ -10,15 +11,13 @@ html {
 }
 body {
 	min-height: 100%;
-	background-color: v.$black;
-	color: v.$white;
-}
-*, *:before, *:after {
-	box-sizing: inherit;
-}
-body {
+	background-color: v.$bgColor;
+	color: v.$black;
 	font-family: v.$principalFont;
 	font-size: 1.6rem;
+}
+*, *:before, *:after {
+	box-sizing: border-box;
 }
 .container {
 	width: 95%;

@@ -5,7 +5,7 @@
 		"psr-4": {
 			"MVC\\" : "./",
 			"Controllers\\" : "./controllers",
-			"Model\\" : "./models",
+			"Models\\" : "./models",
 			"Classes\\" : "./classes"
 		}
 	},
@@ -14,5 +14,8 @@
 			"name": "EsTeBaN22001",
 			"email": "esteban1.redon2@gmail.com"
 		}
-	]
+	],
+	"require": {
+		"vlucas/phpdotenv": "^5.5"
+	}
 }

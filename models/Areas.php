@@ -2,11 +2,11 @@
 
 namespace Models;
 
-use Model\ActiveRecord;
+use Models\ActiveRecord;
 
-class Area extends ActiveRecord{
+class Areas extends ActiveRecord{
 
-  protected static $table = 'area';
+  protected static $table = 'areas';
   protected static $columsDB = ['id', 'name', 'description'];
 
   public function __construct($args = []) {

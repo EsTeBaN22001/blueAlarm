@@ -47,10 +47,10 @@ class Users extends ActiveRecord{
 
     $_SESSION['login'] = true;
     $_SESSION['id'] = $this->id;
-    $_SESSION['name'] = trim($this->name);
-    $_SESSION['surnname'] = trim($this->surname);
-    $_SESSION['email'] = trim($this->email);
-    $_SESSION['admin'] = $this->admin;
+    $_SESSION['name'] = $this->name;
+    $_SESSION['surnname'] = $this->surname;
+    $_SESSION['email'] = $this->email;
+    $_SESSION['admin'] = $this->admin == "1" ? true : false;
 
   }
 

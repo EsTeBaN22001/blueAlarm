@@ -25,8 +25,8 @@ class LoginController{
           $passwordVerify = password_verify($user->password, $userExists->password);
 
           if($passwordVerify){
-
-            $user->startSession();
+            
+            $userExists->startSession();
 
             header('Location: /dashboard');
 

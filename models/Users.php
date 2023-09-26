@@ -27,6 +27,20 @@ class Users extends ActiveRecord{
     return self::$alerts;
   }
 
+  public function validateEditInfo(){
+    if(!$this->name){
+      self::$alerts['error'][] = 'El nombre es inválido';
+    }
+    if(!$this->surname){
+      self::$alerts['error'][] = 'El email es inválido';
+    }
+    if(!$this->email){
+      self::$alerts['error'][] = 'El email es inválido';
+    }
+
+    return self::$alerts;
+  }
+
   public function startSession(){
     
     session_unset();

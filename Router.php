@@ -24,9 +24,14 @@ class Router
 		session_start();
 
 		// Arreglo de rutas protegidas...
-		// $rutas_protegidas = [];
+		$protectedRoutes = [
+			'/dashboard',
+			'/dashboard/users',
+			'/dashboard/users/edit',
+			'/dashboard/users/delete',
+		];
 
-		// $auth = $_SESSION['login'] ?? null;
+		$auth = $_SESSION['login'] ?? null;
 
 		$currentUrl = $_SERVER['PATH_INFO'] ?? '/';
 		$method = $_SERVER['REQUEST_METHOD'];
@@ -37,6 +42,9 @@ class Router
 			$fn = $this->postRoutes[$currentUrl] ?? null;
 		}
 
+		if(in_array($currentUrl, $protectedRoutes) && !$auth){
+			header('Location: /');
+		}
 
 		if ( $fn ) {
 			// Call user fn va a llamar una función cuando no sabemos cual sera
@@ -59,6 +67,22 @@ class Router
 		// entonces incluimos la vista en el layout
 		include_once __DIR__ . "/views/$view.php";
 		$content = ob_get_clean(); // Limpia el Buffer
-		include_once __DIR__ . '/views/layout.php';
+		include_once __DIR__ . '/views/templates/layout-dashboard.php';
+	}
+
+	public function renderLogin($view, $datos = [])
+	{
+
+		// Leer lo que le pasamos  a la vista
+		foreach ($datos as $key => $value) {
+			$$key = $value;  // Doble signo de dolar significa: variable de variable, básicamente nuestra variable sigue siendo la original, pero al asignarla a otra no la reescribe, mantiene su valor, de esta forma el nombre de la variable se asigna dinamicamente
+		}
+
+		ob_start(); // Almacenamiento en memoria durante un momento...
+
+		// entonces incluimos la vista en el layout
+		include_once __DIR__ . "/views/$view.php";
+		$content = ob_get_clean(); // Limpia el Buffer
+		include_once __DIR__ . '/views/templates/layout.php';
 	}
 }

@@ -1,7 +1,7 @@
-@use 'base/variables' as v;
-@use 'base/mixins' as m;
+@use "base/variables" as v;
+@use "base/mixins" as m;
 
-.alert{
+.alert {
   display: block;
   margin: 1rem auto;
   padding: 1rem;
@@ -10,15 +10,15 @@
   font-size: 1rem;
   text-transform: uppercase;
   max-width: fit-content;
-  border-radius: 1rem;
+  border-radius: 0.6rem;
 
-  &.error{
+  &.error {
     background-color: v.$red;
-    border-left: .5rem solid darken(v.$red, 10%);
+    border-left: 0.5rem solid darken(v.$red, 10%);
   }
 
-  &.success{
+  &.success {
     background-color: v.$green;
-    border-left: .5rem solid darken(v.$green, 10%);
+    border-left: 0.5rem solid darken(v.$green, 10%);
   }
 }

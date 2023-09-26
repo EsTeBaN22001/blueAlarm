@@ -51,6 +51,24 @@ class UsersController{
     ]);
   }
 
+  public static function delete(){
+
+    $userId = $_GET['id'] ?? null;
+
+    $user = Users::where('id', $userId);
+
+    if(!$userId || !$user){
+      redirect('/dashboard/users');
+    }
+
+    $result = $user->delete();
+
+    if($result){
+      redirect('/dashboard/users?at=success&am=Se eliminó el usuario correctamente');
+    }
+
+  }
+
 }
 
 ?>

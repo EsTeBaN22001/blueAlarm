@@ -50,6 +50,14 @@ class LoginController{
     ]);
   }
 
+  public static function logout(){
+
+    session_unset();
+
+    header('Location: /');
+
+  }
+
 }
 
 ?>

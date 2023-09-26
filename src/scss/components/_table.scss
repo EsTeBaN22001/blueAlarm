@@ -37,6 +37,7 @@
   tbody {
     tr {
       border-bottom: 1px solid #dddddd;
+      text-align: start;
 
       &:nth-of-type(even) {
         background-color: v.$white;

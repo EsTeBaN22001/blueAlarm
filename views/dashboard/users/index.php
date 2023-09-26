@@ -33,7 +33,7 @@
             class="actions-button edit-button">
             <i class="fa-solid fa-pencil"></i>
           </a>
-          <a href="$_SERVER['HOST']  ?>/dashboard/users/delete?id=<?= $user->id ?>"
+          <a href="<?= $_SERVER['HOST']  ?>/dashboard/users/delete?id=<?= $user->id ?>"
             class="actions-button delete-button">
             <i class="fa-solid fa-trash"></i>
           </a>

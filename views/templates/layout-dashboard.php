@@ -47,7 +47,7 @@
             </a>
           </li>
           <li class="list">
-            <a href="#" class="nav-link">
+            <a href="<?= $_SERVER['HOST']  ?>/dashboard/areas" class="nav-link">
               <i class="bx bx-pie-chart-alt-2 icon"></i>
               <span class="link">Gestion de area</span>
             </a>
@@ -70,13 +70,13 @@
               <span class="link">Promedio respuesta</span>
             </a>
           </li>
-          <br><br> <br><br><br>
-          <li class="list">
-            <a href="<?= $_ENV['HOST'] ?>/logout" class="nav-link">
-              <i class="bx bx-log-out icon"></i>
-              <span class="link">Logout</span>
-            </a>
-          </li>
+        </ul>
+        <li class="list logout-link">
+          <a href="<?= $_ENV['HOST'] ?>/logout" class="nav-link">
+            <i class="bx bx-log-out icon"></i>
+            <span class="link">Logout</span>
+          </a>
+        </li>
       </div>
     </div>
     </div>

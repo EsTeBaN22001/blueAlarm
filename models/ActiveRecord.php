@@ -196,13 +196,13 @@ class ActiveRecord
 		foreach ($attributes as $key => $value) {
 			$values[] = "{$key}='{$value}'";
 		}
-
 		// Consulta SQL
 		$query = "UPDATE " . static::$table . " SET ";
 		$query .=  join(', ', $values);
 		$query .= " WHERE id = '" . self::$db->escape_string($this->id) . "' ";
 		$query .= " LIMIT 1 ";
 
+		
 		// Actualizar BD
 		$result = self::$db->query($query);
 		return $result;
@@ -251,20 +251,5 @@ class ActiveRecord
 		$query = "SELECT * FROM " . static::$table  . " WHERE ${column} = '${id}'";
 		$result = self::consultSQL($query);
 		if(!$result) header('Location: /polls/list');
-	}
-
-	// Función específica para eliminar las skills de de un worker
-	public static function deleteSkillsWorkerById($idWorker)
-	{
-		$query = "DELETE FROM skills_workers WHERE id_worker = " . $idWorker . ";";
-		$result = self::consultSQL($query);
-		debugstop($result);
-	}
-
-	// Función específica para insertar las skills en la tabla skills_workers
-	public static function addSkillsWorkers($idWorker, $idSkill){
-		$query = "INSERT INTO skills_workers (id_worker, id_skill) values (" . $idWorker . ", " . $idSkill . ");";
-		
-		return self::$db->query($query);
 	}
 }

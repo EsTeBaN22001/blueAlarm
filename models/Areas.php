@@ -7,12 +7,23 @@ use Models\ActiveRecord;
 class Areas extends ActiveRecord{
 
   protected static $table = 'areas';
-  protected static $columsDB = ['id', 'name', 'description'];
+  protected static $columnsDB = ['id', 'name', 'description'];
 
   public function __construct($args = []) {
     $this->id = $args['id'] ?? null;
-    $this->name = $args['name'] ?? '';
-    $this->description = $args['description'] ?? '';
+    $this->name = $args['name'] ?? null;
+    $this->description = $args['description'] ?? null;
+  }
+
+  public function validateEditInfo(){
+    if(!$this->name){
+      self::$alerts['error'][] = 'El nombre es inválido';
+    }
+    if(!$this->description){
+      self::$alerts['error'][] = 'La descripción es inválida';
+    }
+
+    return self::$alerts;
   }
 
 }

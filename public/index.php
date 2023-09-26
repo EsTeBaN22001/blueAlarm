@@ -27,5 +27,9 @@ $router->get('/dashboard/users/delete', [UsersController::class, 'delete']);
 // Areas
 $router->get('/dashboard/areas', [AreasController::class, 'index']);
 
+$router->get('/dashboard/areas/edit', [AreasController::class, 'edit']);
+$router->post('/dashboard/areas/edit', [AreasController::class, 'edit']);
+$router->get('/dashboard/areas/delete', [AreasController::class, 'delete']);
+
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
 $router->checkRoutes();

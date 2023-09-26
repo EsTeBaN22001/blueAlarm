@@ -8,7 +8,7 @@
   <?php endif?>
 </div>
 
-<div class="table-container">
+<div class="table-container section">
   <table class="content-table">
     <thead>
       <tr>

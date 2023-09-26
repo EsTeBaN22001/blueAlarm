@@ -29,6 +29,9 @@ class Router
 			'/dashboard/users',
 			'/dashboard/users/edit',
 			'/dashboard/users/delete',
+			'/dashboard/areas',
+			'/dashboard/areas/edit',
+			'/dashboard/areas/delete',
 		];
 
 		$auth = $_SESSION['login'] ?? null;

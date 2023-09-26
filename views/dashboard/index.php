@@ -6,7 +6,7 @@
       <p>Gestion de usuarios</p>
     </div>
     <div class="card-content-part">
-      <a href="<?= $_SERVER['HOST']  ?>/dashboard/users">Acceder</a>
+      <a href="<?= $_ENV['HOST']  ?>/dashboard/users">Acceder</a>
     </div>
   </div>
   <div class="cpanel cpanel-green">
@@ -16,7 +16,7 @@
       <p>Gestion de areas</p>
     </div>
     <div class="card-content-part">
-      <a href="#">Acceder</a>
+      <a href="<?= $_ENV['HOST']  ?>/dashboard/areas">Acceder</a>
     </div>
   </div>
   <div class="cpanel cpanel-orange">

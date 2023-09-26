@@ -1,4 +1,4 @@
-<h1>Areas</h1>
+<h1>Áreas</h1>
 
 <div class="container-sm section-sm">
   <?php if (isset($_GET['at']) && isset($_GET['am']) ): ?>
@@ -46,4 +46,5 @@
       <?php endforeach ?>
     </tbody>
   </table>
+  <a href="<?= $_ENV['HOST'] ?>/dashboard/areas/create" class="create-button">Crear área</a>
 </div>

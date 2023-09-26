@@ -18,6 +18,38 @@ class AreasController{
 
   }
 
+  public static function create(Router $router){
+
+    $area = new Areas();
+    
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+      $area->syncUp($_POST);
+
+      $alerts = $area->validate();
+
+      if(empty($alerts)){
+        
+        $result = $area->save();
+
+        if($result){
+          redirect('/dashboard/areas?at=success&am=Se creó el área correctamente');
+        }
+
+      }
+
+    }
+    
+    $alerts = Areas::getAlerts();
+    
+    $router->render('dashboard/areas/create', [
+      'title' => 'Usuarios',
+      'alerts' => $alerts,
+      'area' => $area
+    ]);
+
+  }
+
   public static function edit(Router $router){
 
     $areaId = $_GET['id'] ?? null;
@@ -32,7 +64,7 @@ class AreasController{
 
       $area->syncUp($_POST);
       
-      $alerts = $area->validateEditInfo();
+      $alerts = $area->validate();
 
       if(empty($alerts)){
         

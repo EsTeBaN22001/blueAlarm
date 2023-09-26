@@ -26,7 +26,8 @@ $router->get('/dashboard/users/delete', [UsersController::class, 'delete']);
 
 // Areas
 $router->get('/dashboard/areas', [AreasController::class, 'index']);
-
+$router->get('/dashboard/areas/create', [AreasController::class, 'create']);
+$router->post('/dashboard/areas/create', [AreasController::class, 'create']);
 $router->get('/dashboard/areas/edit', [AreasController::class, 'edit']);
 $router->post('/dashboard/areas/edit', [AreasController::class, 'edit']);
 $router->get('/dashboard/areas/delete', [AreasController::class, 'delete']);

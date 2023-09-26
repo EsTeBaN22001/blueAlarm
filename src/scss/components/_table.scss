@@ -91,3 +91,8 @@
     }
   }
 }
+
+.create-button {
+  @include m.button(v.$principalColor, v.$white);
+  width: fit-content;
+}

@@ -15,7 +15,7 @@ class Areas extends ActiveRecord{
     $this->description = $args['description'] ?? null;
   }
 
-  public function validateEditInfo(){
+  public function validate(){
     if(!$this->name){
       self::$alerts['error'][] = 'El nombre es inválido';
     }

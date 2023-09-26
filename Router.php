@@ -30,6 +30,7 @@ class Router
 			'/dashboard/users/edit',
 			'/dashboard/users/delete',
 			'/dashboard/areas',
+			'/dashboard/areas/create',
 			'/dashboard/areas/edit',
 			'/dashboard/areas/delete',
 		];

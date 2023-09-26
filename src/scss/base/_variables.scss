@@ -1,5 +1,5 @@
 // Fuentes
-$principalFont: 'Roboto', sans-serif;
+$principalFont: "Roboto", sans-serif;
 
 // Tamaño de Media Queries
 $breakpointSmartWatch: 320px;
@@ -10,17 +10,20 @@ $breakpointDesktop: 930px;
 $desktop: 1024px;
 
 // Colores
-$principalColor: #ffc107;
+$principalColor: #0b7abb;
 $titleColor: #565758;
 $bgColor: #f9f9f9;
 $black: #000000;
-$white: #FFFFFF;
+$white: #ffffff;
 $lightGray: #e0e0e0;
 $gray: #a1a1a1;
 $darkGray: #434343;
 
 // Colores de alertas
-$red:#d11919;
-$green:#50a845;
-$blue: #37a6e6;
-$yellow: #e5ff00;
+$red: #e74c3c;
+$green: #50a845;
+$blue: #0b7abb;
+$darkBlue: #2f4254;
+$yellow: #f39c12;
+$purple: #8e44ad;
+$waterGreen: #16a085;

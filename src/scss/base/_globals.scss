@@ -1,51 +1,63 @@
-@use 'variables' as v;
-@use 'mixins' as m;
+@use "variables" as v;
+@use "mixins" as m;
 
 html {
-	font-size: 62.5%;
-	box-sizing: border-box;
-	height: 100%;
+  font-size: 62.5%;
+  box-sizing: border-box;
+  height: 100%;
 
-	@include m.tablet{font-size: 50%;}
-	@include m.phone{font-size: 46%;}
+  @include m.tablet {
+    font-size: 50%;
+  }
+  @include m.phone {
+    font-size: 46%;
+  }
 }
 body {
-	min-height: 100%;
-	background-color: v.$bgColor;
-	color: v.$black;
-	font-family: v.$principalFont;
-	font-size: 1.6rem;
+  min-height: 100%;
+  background-color: v.$bgColor;
+  color: v.$black;
+  font-family: v.$principalFont;
+  font-size: 1.6rem;
 }
-*, *:before, *:after {
-	box-sizing: border-box;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 .container {
-	width: 95%;
-	max-width: 1200px;
-	margin: 0 auto;
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.container-sm{
-	width: 85%;
-	max-width: 1100px;
-	margin: 0 auto;
+.container-sm {
+  width: 85%;
+  max-width: 1100px;
+  margin: 0 auto;
 }
-.section{
-	margin: 5rem auto;
-	margin-top: 12rem;
+.container-usm {
+  width: 60%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.section {
+  margin: 5rem auto;
+  margin-top: 12rem;
 
-	@include m.tablet{
-		margin-top: 5rem;
-	}
+  @include m.tablet {
+    margin-top: 5rem;
+  }
 }
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
-ul, li{
-	list-style: none;
+ul,
+li {
+  list-style: none;
 }
 
 img {
-	max-width: 100%;
-	width: inherit;
-	height: inherit;
+  max-width: 100%;
+  width: inherit;
+  height: inherit;
 }

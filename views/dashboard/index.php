@@ -16,17 +16,17 @@
       <p>Gestion de areas</p>
     </div>
     <div class="card-content-part">
-      <a href="#">Acceder</a>
+      <a href="<?= $_ENV['HOST']  ?>/dashboard/areas">Acceder</a>
     </div>
   </div>
   <div class="cpanel cpanel-orange">
     <div class="icon-part">
       <i class="fa fa-map" aria-hidden="true"></i><br>
-      <small>Pacientes o enfermeros</small>
+      <small>Pacientes y enfermeros</small>
       <p>Asignar areas</p>
     </div>
     <div class="card-content-part">
-      <a href="#">Acceder</a>
+      <a href="<?= $_ENV['HOST']  ?>/dashboard/patients-and-nurses">Acceder</a>
     </div>
   </div>
   <div class="cpanel cpanel-blue">

@@ -5,6 +5,7 @@
   background-color: v.$white;
   padding: 5rem;
   border-radius: 2rem;
+  min-width: 60rem;
   width: fit-content;
 
   h1,
@@ -18,7 +19,8 @@
     text-align: start;
 
     label,
-    input {
+    input,
+    textarea {
       display: block;
       width: 100%;
       color: v.$gray;
@@ -29,7 +31,15 @@
       margin-bottom: 1rem;
     }
 
-    input {
+    select {
+      color: v.$gray;
+      transition: color 0.3s ease;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
       border: none;
       outline: none;
       padding: 1.5rem;

@@ -19,7 +19,7 @@ class Patients extends ActiveRecord{
     $this->id_area = $args['id_area'] ?? null;
   }
 
-  public function validateNewPatient(){
+  public function validatePatient(){
 
     if(!$this->name){
       self::$alerts['error'][] = 'El nombre es obligatorio';

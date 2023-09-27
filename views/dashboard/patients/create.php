@@ -1,5 +1,5 @@
 <form method="POST" class="form container-usm">
-  <h1>Editar información del usuario</h1>
+  <h1>Añadir paciente</h1>
   <?php include_once __DIR__ . '/../../templates/alerts.php'?>
   <div class="field-group">
     <label for="name">Nombre:</label>
@@ -22,14 +22,15 @@
     <input type="text" name="domicile" id="domicile" value="<?= $patient->domicile ?>">
   </div>
   <div class="field-group">
-    <label for="name">Nombre:</label>
+    <label for="name">Área:</label>
     <select name="id_area" id="idArea">
+      <option selected disabled>-- Seleccionar --</option>
       <?php foreach($areas as $area): ?>
       <option value="<?= $area->id ?>"><?= $area->name ?></option>
       <?php endforeach; ?>
     </select>
   </div>
   <div class="field-group">
-    <button type="submit" class="submit-button">Crear Área</button>
+    <button type="submit" class="submit-button">Añadir</button>
   </div>
 </form>

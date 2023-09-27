@@ -40,6 +40,8 @@ $router->get('/dashboard/patients-and-nurses', [PatientsAndNursesController::cla
 // Pacientes CRUD
 $router->get('/dashboard/patients/create', [PatientsController::class, 'create']);
 $router->post('/dashboard/patients/create', [PatientsController::class, 'create']);
+$router->get('/dashboard/patients/edit', [PatientsController::class, 'edit']);
+$router->post('/dashboard/patients/edit', [PatientsController::class, 'edit']);
 
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
 $router->checkRoutes();

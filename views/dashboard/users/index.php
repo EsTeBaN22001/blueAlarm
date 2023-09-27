@@ -35,11 +35,10 @@
         <?php if($_SESSION['admin']): ?>
 
         <td data-title="Acciones" class="actions-buttons-container">
-          <a href="<?= $_SERVER['HOST']  ?>/dashboard/users/edit?id=<?= $user->id ?>"
-            class="actions-button edit-button">
+          <a href="<?= $_ENV['HOST']  ?>/dashboard/users/edit?id=<?= $user->id ?>" class="actions-button edit-button">
             <i class="fa-solid fa-pencil"></i>
           </a>
-          <a href="<?= $_SERVER['HOST']  ?>/dashboard/users/delete?id=<?= $user->id ?>"
+          <a href="<?= $_ENV['HOST']  ?>/dashboard/users/delete?id=<?= $user->id ?>"
             class="actions-button delete-button">
             <i class="fa-solid fa-trash"></i>
           </a>

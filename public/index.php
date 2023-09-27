@@ -5,6 +5,8 @@ require_once __DIR__ . '/../includes/app.php';
 use Controllers\AreasController;
 use Controllers\DashboardController;
 use Controllers\LoginController;
+use Controllers\PatientsAndNursesController;
+use Controllers\PatientsController;
 use Controllers\UsersController;
 use MVC\Router;
 
@@ -31,6 +33,13 @@ $router->post('/dashboard/areas/create', [AreasController::class, 'create']);
 $router->get('/dashboard/areas/edit', [AreasController::class, 'edit']);
 $router->post('/dashboard/areas/edit', [AreasController::class, 'edit']);
 $router->get('/dashboard/areas/delete', [AreasController::class, 'delete']);
+
+// Pacientes y enfermeros - asignación de áreas
+$router->get('/dashboard/patients-and-nurses', [PatientsAndNursesController::class, 'index']);
+
+// Pacientes CRUD
+$router->get('/dashboard/patients/create', [PatientsController::class, 'create']);
+$router->post('/dashboard/patients/create', [PatientsController::class, 'create']);
 
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
 $router->checkRoutes();

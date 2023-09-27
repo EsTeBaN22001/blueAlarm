@@ -53,7 +53,7 @@
             </a>
           </li>
           <li class="list">
-            <a href="#" class="nav-link">
+            <a href="<?= $_ENV['HOST']  ?>/dashboard/patients-and-nurses" class="nav-link">
               <i class="bx bx-map icon"></i>
               <span class="link">Asignacion de area</span>
             </a>
@@ -78,7 +78,6 @@
           </a>
         </li>
       </div>
-    </div>
     </div>
   </nav>
 

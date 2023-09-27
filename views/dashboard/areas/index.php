@@ -31,11 +31,10 @@
         <?php if($_SESSION['admin']): ?>
 
         <td data-title="Acciones" class="actions-buttons-container">
-          <a href="<?= $_SERVER['HOST']  ?>/dashboard/areas/edit?id=<?= $area->id ?>"
-            class="actions-button edit-button">
+          <a href="<?= $_ENV['HOST']  ?>/dashboard/areas/edit?id=<?= $area->id ?>" class="actions-button edit-button">
             <i class="fa-solid fa-pencil"></i>
           </a>
-          <a href="<?= $_SERVER['HOST']  ?>/dashboard/areas/delete?id=<?= $area->id ?>"
+          <a href="<?= $_ENV['HOST']  ?>/dashboard/areas/delete?id=<?= $area->id ?>"
             class="actions-button delete-button">
             <i class="fa-solid fa-trash"></i>
           </a>
@@ -46,5 +45,9 @@
       <?php endforeach ?>
     </tbody>
   </table>
+  <?php if($_SESSION['admin']): ?>
+
   <a href="<?= $_ENV['HOST'] ?>/dashboard/areas/create" class="create-button">Crear área</a>
+
+  <?php endif; ?>
 </div>

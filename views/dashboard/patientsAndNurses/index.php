@@ -1,5 +1,3 @@
-<h1>Pacientes</h1>
-
 <div class="container-sm section-sm">
   <?php if (isset($_GET['at']) && isset($_GET['am']) ): ?>
   <div class="alert <?= $_GET['at'] ?>">
@@ -7,6 +5,8 @@
   </div>
   <?php endif?>
 </div>
+
+<h1>Pacientes</h1>
 
 <div class="table-container">
   <table class="content-table">

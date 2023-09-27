@@ -84,6 +84,24 @@ class PatientsController{
 
   }
 
+  public static function delete(){
+
+    $idPatient = $_GET['id'] ?? null;
+
+    $patient = Patients::where('id', $idPatient);
+
+    if(!$idPatient || !$patient){
+      redirect('/dashboard/patients-and-nurses');
+    }
+
+    $result = $patient->delete();
+
+    if($result){
+      redirect('/dashboard/patients-and-nurses?at=success&am=Se eliminó el paciente correctamente');
+    }
+
+  }
+
 }
 
 ?>

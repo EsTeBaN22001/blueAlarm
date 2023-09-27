@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Coding By CodingNepal - codingnepalweb.com -->
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
@@ -41,19 +41,23 @@
             </a>
           </li>
           <li class="list">
+<<<<<<< HEAD
             <a href="<?= $ENV['HOST']  ?>/dashboard/users" class="nav-link">
+=======
+            <a href="<?= $_ENV['HOST']  ?>/dashboard/users" class="nav-link">
+>>>>>>> dev
               <i class="bx bx-group icon"></i>
               <span class="link">Usuarios</span>
             </a>
           </li>
           <li class="list">
-            <a href="#" class="nav-link">
+            <a href="<?= $_ENV['HOST']  ?>/dashboard/areas" class="nav-link">
               <i class="bx bx-pie-chart-alt-2 icon"></i>
               <span class="link">Gestion de area</span>
             </a>
           </li>
           <li class="list">
-            <a href="#" class="nav-link">
+            <a href="<?= $_ENV['HOST']  ?>/dashboard/patients-and-nurses" class="nav-link">
               <i class="bx bx-map icon"></i>
               <span class="link">Asignacion de area</span>
             </a>
@@ -70,15 +74,14 @@
               <span class="link">Promedio respuesta</span>
             </a>
           </li>
-          <br><br> <br><br><br>
-          <li class="list">
-            <a href="<?= $_ENV['HOST'] ?>/logout" class="nav-link">
-              <i class="bx bx-log-out icon"></i>
-              <span class="link">Logout</span>
-            </a>
-          </li>
+        </ul>
+        <li class="list logout-link">
+          <a href="<?= $_ENV['HOST'] ?>/logout" class="nav-link">
+            <i class="bx bx-log-out icon"></i>
+            <span class="link">Logout</span>
+          </a>
+        </li>
       </div>
-    </div>
     </div>
   </nav>
 

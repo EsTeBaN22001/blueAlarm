@@ -1,4 +1,4 @@
-<h1>Usuarios</h1>
+<h1>Áreas</h1>
 
 <div class="container-sm section-sm">
   <?php if (isset($_GET['at']) && isset($_GET['am']) ): ?>
@@ -8,15 +8,13 @@
   <?php endif?>
 </div>
 
-<div class="table-container">
+<div class="table-container section">
   <table class="content-table">
     <thead>
       <tr>
         <th>Id</th>
         <th>Nombre</th>
-        <th>Apellido</th>
-        <th>Email</th>
-        <th>Administrador</th>
+        <th>Descripción</th>
         <?php if($_SESSION['admin']): ?>
 
         <th>Acciones</th>
@@ -25,20 +23,18 @@
       </tr>
     </thead>
     <tbody>
-      <?php foreach($users as $user): ?>
+      <?php foreach($areas as $area): ?>
       <tr>
-        <td data-title="Id"><?= $user->id ?></td>
-        <td data-title="Nombre"><?= $user->name ?></td>
-        <td data-title="Apellido"><?= $user->surname ?></td>
-        <td data-title="Email"><?= $user->email ?></td>
-        <td data-title="Administrador"><?= $user->admin ?></td>
+        <td data-title="Id"><?= $area->id ?></td>
+        <td data-title="Nombre"><?= $area->name ?></td>
+        <td data-title="Descripción"><?= $area->description ?></td>
         <?php if($_SESSION['admin']): ?>
 
         <td data-title="Acciones" class="actions-buttons-container">
-          <a href="<?= $_ENV['HOST']  ?>/dashboard/users/edit?id=<?= $user->id ?>" class="actions-button edit-button">
+          <a href="<?= $_ENV['HOST']  ?>/dashboard/areas/edit?id=<?= $area->id ?>" class="actions-button edit-button">
             <i class="fa-solid fa-pencil"></i>
           </a>
-          <a href="<?= $_ENV['HOST']  ?>/dashboard/users/delete?id=<?= $user->id ?>"
+          <a href="<?= $_ENV['HOST']  ?>/dashboard/areas/delete?id=<?= $area->id ?>"
             class="actions-button delete-button">
             <i class="fa-solid fa-trash"></i>
           </a>
@@ -49,4 +45,9 @@
       <?php endforeach ?>
     </tbody>
   </table>
+  <?php if($_SESSION['admin']): ?>
+
+  <a href="<?= $_ENV['HOST'] ?>/dashboard/areas/create" class="create-button">Crear área</a>
+
+  <?php endif; ?>
 </div>

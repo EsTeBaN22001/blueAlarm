@@ -37,6 +37,13 @@ class Router
 			'/dashboard/patients/create',
 			'/dashboard/patients/edit',
 			'/dashboard/patients/delete',
+			'/dashboard/nurses/create',
+			'/dashboard/nurses/edit',
+			'/dashboard/nurses/delete',
+			'/dashboard/calls',
+			'/dashboard/calls/create',
+			'/dashboard/calls/edit-state',
+			'/dashboard/calls/delete',
 		];
 
 		$auth = $_SESSION['login'] ?? null;

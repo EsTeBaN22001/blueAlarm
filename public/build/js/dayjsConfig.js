@@ -1,0 +1,1 @@
+moment.locale("es");const datesToFormat=document.querySelectorAll(".dateFormat");datesToFormat.forEach(t=>{const e=t.textContent,o=moment.utc(e),m=moment.utc().diff(o,"minutes"),n=moment.duration(m,"minutes").humanize();t.textContent="Hace "+n});

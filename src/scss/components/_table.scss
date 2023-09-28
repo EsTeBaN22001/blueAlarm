@@ -66,6 +66,22 @@
       }
     }
   }
+
+  .answered-buttons-container {
+    .answered-button {
+      padding: 1rem;
+      color: v.$white;
+      border-radius: 1rem;
+
+      &.pendient-button {
+        background-color: v.$red;
+      }
+
+      &.completed-button {
+        background-color: v.$blue;
+      }
+    }
+  }
 }
 
 @include m.tablet {

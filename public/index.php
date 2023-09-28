@@ -1,8 +1,10 @@
 <?php 
+date_default_timezone_set('America/Buenos_Aires');
 
 require_once __DIR__ . '/../includes/app.php';
 
 use Controllers\AreasController;
+use Controllers\CallsController;
 use Controllers\DashboardController;
 use Controllers\LoginController;
 use Controllers\NursesController;
@@ -51,6 +53,13 @@ $router->post('/dashboard/nurses/create', [NursesController::class, 'create']);
 $router->get('/dashboard/nurses/edit', [NursesController::class, 'edit']);
 $router->post('/dashboard/nurses/edit', [NursesController::class, 'edit']);
 $router->get('/dashboard/nurses/delete', [NursesController::class, 'delete']);
+
+// Llamados - calls
+$router->get('/dashboard/calls', [CallsController::class, 'index']);
+$router->get('/dashboard/calls/create', [CallsController::class, 'create']);
+$router->post('/dashboard/calls/create', [CallsController::class, 'create']);
+$router->get('/dashboard/calls/edit-state', [CallsController::class, 'editState']);
+$router->get('/dashboard/calls/delete', [CallsController::class, 'delete']);
 
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
 $router->checkRoutes();

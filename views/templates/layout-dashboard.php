@@ -63,9 +63,9 @@
             </a>
           </li>
           <li class="list">
-            <a href="#" class="nav-link">
+            <a href="<?= $_ENV['HOST'] ?>/dashboard/calls" class="nav-link">
               <i class="bx bx-phone icon"></i>
-              <span class="link">Registro llamados</span>
+              <span class="link">Llamados</span>
             </a>
           </li>
           <li class="list">

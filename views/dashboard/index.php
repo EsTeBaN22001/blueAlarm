@@ -36,7 +36,7 @@
       <p>Registro de llamados</p>
     </div>
     <div class="card-content-part">
-      <a href="#">Acceder</a>
+      <a href="<?= $_ENV['HOST'] ?>/dashboard/calls">Acceder</a>
     </div>
   </div>
   <div class="cpanel cpanel-red">
